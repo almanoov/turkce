@@ -2,9 +2,386 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Мой первый сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkee Alanya — Турецкий язык в Аланье</title>
+    
+    <!-- Inline Favicon (Традиционный турецкий глаз Назар / Назар Бонджук) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230f3800'/><circle cx='50' cy='50' r='48' fill='%231d4ed8'/><circle cx='50' cy='50' r='36' fill='%2360a5fa'/><circle cx='50' cy='50' r='24' fill='%23ffffff'/><circle cx='50' cy='50' r='12' fill='%231e293b'/></svg>">
+
+    <!-- Подключение стильного шрифта Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #e11d48;
+            --primary-hover: #be123c;
+            --secondary: #0284c7;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gray-100: #f1f5f9;
+            --gray-600: #475569;
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Навигация */
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-badge {
+            background: #e0f2fe;
+            color: var(--secondary);
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        /* Главная баннерная часть (Hero) */
+        .hero {
+            background: linear-gradient(135deg, #fff 0%, #fff1f2 100%);
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #ffe4e6;
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 1.2rem;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+
+        /* Раздел интерактивного словаря */
+        .section-title {
+            text-align: center;
+            margin: 4rem 0 2rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-tr {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .card-ru {
+            font-size: 1.1rem;
+            color: var(--dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-context {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            background: var(--gray-100);
+            padding: 6px 12px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* Интерактивный блок «Ситуации в Аланье» */
+        .scenarios {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow);
+            margin-top: 3rem;
+        }
+
+        .scenario-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--gray-100);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .phrase-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .phrase-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: var(--light);
+            border-radius: 12px;
+        }
+
+        .phrase-tr {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .phrase-ru {
+            color: var(--gray-600);
+        }
+
+        /* Подвал сайта */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .phrase-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Привет, мир! Мой сайт на GitHub Pages работает.</h1>
+
+    <!-- Шапка -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                🇹🇷 Turkee
+                <span class="logo-badge">Alanya</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Главная секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tag">☀️ Экспресс-курс для жителей и гостей Аланьи</span>
+            <h1>Изучай турецкий легко <br>в <span>Аланье</span></h1>
+            <p>Практические фразы и слова для комфортной жизни, рынков, транспорта и общения у моря.</p>
+        </div>
+    </section>
+
+    <!-- Карточки слов -->
+    <main class="container">
+        <div class="section-title">
+            <h2>Популярные фразы на каждый день</h2>
+            <p style="color: var(--gray-600);">Нажимайте на карточки, чтобы услышать разговорные фразы</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-category">Приветствие</div>
+                <div class="card-tr">Merhaba!</div>
+                <div class="card-ru">Здравствуйте!</div>
+                <div class="card-context">Универсальное приветствие</div>
+            </div>
+
+            <div class="card">
+                <div class="card-category">Покупки</div>
+                <div class="card-tr">Ne kadar?</div>
+                <div class="card-ru">Сколько стоит?</div>
+                <div class="card-context">Для базара и магазинов</div>
+            </div>
+
+            <div class="card">
+                <div class="card-category">Транспорт</div>
+                <div class="card-tr">İnecek var!</div>
+                <div class="card-ru">Остановите на остановке!</div>
+                <div class="card-context">В долмуше (автобусе)</div>
+            </div>
+
+            <div class="card">
+                <div class="card-category">Кафе & Ресторан</div>
+                <div class="card-tr">Hesap, lütfen</div>
+                <div class="card-ru">Счет, пожалуйста</div>
+                <div class="card-context">В кафе и ресторанах</div>
+            </div>
+
+            <div class="card">
+                <div class="card-category">Вежливость</div>
+                <div class="card-tr">Teşekkür ederim</div>
+                <div class="card-ru">Спасибо</div>
+                <div class="card-context">В любой ситуации</div>
+            </div>
+
+            <div class="card">
+                <div class="card-category">Аланья Лайф</div>
+                <div class="card-tr">Kolay gelsin!</div>
+                <div class="card-ru">Удачной работы!</div>
+                <div class="card-context">Продавцам и работникам</div>
+            </div>
+        </div>
+
+        <!-- Раздел сценариев -->
+        <div class="scenarios">
+            <h2 style="text-align: center; margin-bottom: 1.5rem;">Мини-разговорник локаций Аланьи</h2>
+            
+            <div class="phrase-list">
+                <div class="phrase-item">
+                    <span class="phrase-tr">Cuma Pazarı nerede?</span>
+                    <span class="phrase-ru">Где находится Пятничный рынок?</span>
+                </div>
+                <div class="phrase-item">
+                    <span class="phrase-tr">Kalesi'ye nasıl gidebilirim?</span>
+                    <span class="phrase-ru">Как мне добраться до Крепости Аланьи?</span>
+                </div>
+                <div class="phrase-item">
+                    <span class="phrase-tr">Bir porsiyon tavuk döner, lütfen.</span>
+                    <span class="phrase-ru">Одна порция куриного Дёнера, пожалуйста.</span>
+                </div>
+                <div class="phrase-item">
+                    <span class="phrase-tr">Deniz çok güzel!</span>
+                    <span class="phrase-ru">Море очень красивое!</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© Turkee Alanya. Изучай турецкий с удовольствием у моря!</p>
+    </footer>
+
 </body>
 </html>
