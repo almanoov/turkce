@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Türkçe Gramer - Önce / Sonra</title>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-color: #1e293b;
+      --border-color: #e2e8f0;
+      --header-bg: #0f172a;
+      --header-text: #ffffff;
+      --row-hover: #f1f5f9;
+      --col1-accent: #3b82f6;
+      --col2-accent: #10b981;
+      --col3-accent: #8b5cf6;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 1.75rem;
+      color: var(--header-bg);
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      padding: 16px;
+      font-weight: 600;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      vertical-align: top;
+      width: 33.33%;
+    }
+
+    th:nth-child(1) { border-bottom: 4px solid var(--col1-accent); }
+    th:nth-child(2) { border-bottom: 4px solid var(--col2-accent); }
+    th:nth-child(3) { border-bottom: 4px solid var(--col3-accent); }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    tr:hover td {
+      background-color: var(--row-hover);
+    }
+
+    /* Выделение грамматических конструкций */
+    td strong {
+      color: #0f172a;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 12px;
+      }
+      .container {
+        padding: 12px;
+      }
+      th, td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Türkçe Gramer: Önce / Sonra</h1>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>1. İsim + (dan/den/tan/ten) + önce / sonra</th>
+            <th>2. Fiil + madan/meden + önce</th>
+            <th>3. Fiil + dıktan/dikten/duktan/dükten (tıktan...) + sonra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Okuldan önce</strong> otobüse biniyorum.</td>
+            <td><strong>Yatmadan önce</strong> kitap okuyoruz.</td>
+            <td><strong>Yemek yedikten sonra</strong> kahve içiyorum.</td>
+          </tr>
+          <tr>
+            <td><strong>Dersten sonra</strong> eve gidiyorum.</td>
+            <td><strong>Uyumadan önce</strong> dişlerimizi fırçalıyoruz.</td>
+            <td><strong>Spor yaptıktan sonra</strong> duş alıyoruz.</td>
+          </tr>
+          <tr>
+            <td><strong>Tatilden önce</strong> bavul hazırlıyorum.</td>
+            <td><strong>Yemek yemeden önce</strong> ellerimizi yıkıyoruz.</td>
+            <td><strong>Kahvaltı ettikten sonra</strong> işe gitmiyorum, okula geliyorum.</td>
+          </tr>
+          <tr>
+            <td><strong>Düğünden sonra</strong> balayına gittik.</td>
+            <td><strong>Spor yapmadan önce</strong> kıyafetlerimizi değiştiriyoruz.</td>
+            <td><strong>Duş aldıktan sonra</strong> kıyafetlerimi giyiyorum ve saçlarımı kurutuyorum.</td>
+          </tr>
+          <tr>
+            <td><strong>Partiden önce</strong> marketten alışveriş yaptım.</td>
+            <td><strong>Pazara gitmeden önce</strong> para çekiyorum.</td>
+            <td><strong>Temizlik yaptıktan sonra</strong> dinleniyorum.</td>
+          </tr>
+          <tr>
+            <td><strong>Sınavdan sonra</strong> diskoya gittim.</td>
+            <td><strong>Ders çalışmadan önce</strong> biraz uyuyorum.</td>
+            <td><strong>Kitap okuduktan sonra</strong> uyuyorum.</td>
+          </tr>
+          <tr>
+            <td><strong>Yemekten sonra</strong> çay içiyoruz.</td>
+            <td><strong>Çay içmeden önce</strong> yemek yiyoruz.</td>
+            <td><strong>Uyuduktan sonra</strong> rüyalar görüyorum.</td>
+          </tr>
+          <tr>
+            <td><strong>Spordan sonra</strong> duş aldım.</td>
+            <td></td>
+            <td><strong>Uçağa bindikten sonra</strong> cep telefonumuzu kapatıyoruz.</td>
+          </tr>
+          <tr>
+            <td><strong>Alışverişten önce</strong> ATM'den para çektik.</td>
+            <td></td>
+            <td><strong>Uçaktan indikten sonra</strong> ailemizi arıyoruz.</td>
+          </tr>
+          <tr>
+            <td><strong>Sinemadan sonra</strong> eve gittim.</td>
+            <td></td>
+            <td><strong>İşini bitirdikten sonra</strong> beni ara.</td>
+          </tr>
+          <tr>
+            <td><strong>İşten sonra</strong> dinlenmek istiyoruz.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Filmden önce</strong> mısır patlattım.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Kurstan sonra</strong> kahve içmek istiyorum.</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
