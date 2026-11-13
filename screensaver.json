@@ -54,7 +54,7 @@
         }
       ]
     },
-        {
+    {
       "source_id": 3,
       "source_name": "bing.biturl.top",
       "streams": [
@@ -63,23 +63,27 @@
           "resolution": "1280x720",
           "width": 1280,
           "height": 720,
-          "url": "https://bing.biturl.top/?format=image&index=random"
+          "url": "https://bing.biturl.top/?resolution=1366x768&format=image&index=random&mkt=zh-CN"
         },
         {
           "quality": "fullhd",
           "resolution": "1920x1080",
           "width": 1920,
           "height": 1080,
-          "url": "https://bing.biturl.top/?format=image&index=random"
+          "url": "https://bing.biturl.top/?resolution=1920x1080&format=image&index=random&mkt=zh-CN"
         },
         {
           "quality": "4k",
           "resolution": "3840x2160",
           "width": 3840,
           "height": 2160,
-          "url": "https://bing.biturl.top/?format=image&index=random"
+          "url": "https://bing.biturl.top/?resolution=UHD&format=image&index=random&mkt=zh-CN"
         }
       ]
     },
+
+
+
+    
   ]
 }
