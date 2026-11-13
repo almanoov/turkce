@@ -1,1 +1,58 @@
-ерыеыыекр
+{
+  "sources": [
+    {
+      "source_id": 1,
+      "source_name": "picsum.photos",
+      "streams": [
+        {
+          "quality": "HD",
+          "resolution": "1280x720",
+          "width": 1280,
+          "height": 720,
+          "url": "https://picsum.photos/1280/720"
+        },
+        {
+          "quality": "Full HD",
+          "resolution": "1920x1080",
+          "width": 1920,
+          "height": 1080,
+          "url": "https://picsum.photos/1920/1080"
+        },
+        {
+          "quality": "4K",
+          "resolution": "3840x2160",
+          "width": 3840,
+          "height": 2160,
+          "url": "https://picsum.photos/3840/2160"
+        }
+      ]
+    },
+    {
+      "source_id": 2,
+      "source_name": "bingw.jasonzeng.dev",
+      "streams": [
+        {
+          "quality": "HD",
+          "resolution": "1280x720",
+          "width": 1280,
+          "height": 720,
+          "url": "https://bingw.jasonzeng.dev/?index=random"
+        },
+        {
+          "quality": "Full HD",
+          "resolution": "1920x1080",
+          "width": 1920,
+          "height": 1080,
+          "url": "https://bingw.jasonzeng.dev/?index=random"
+        },
+        {
+          "quality": "4K",
+          "resolution": "3840x2160",
+          "width": 3840,
+          "height": 2160,
+          "url": "https://bingw.jasonzeng.dev/?index=random"
+        }
+      ]
+    }
+  ]
+}
