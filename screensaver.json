@@ -36,21 +36,21 @@
           "resolution": "1280x720",
           "width": 1280,
           "height": 720,
-          "url": "https://bingw.jasonzeng.dev/?index=random"
+          "url": "https://bingw.jasonzeng.dev/?resolution=1366x768&index=random"
         },
         {
           "quality": "fullhd",
           "resolution": "1920x1080",
           "width": 1920,
           "height": 1080,
-          "url": "https://bingw.jasonzeng.dev/?index=random"
+          "url": "https://bingw.jasonzeng.dev/?resolution=1920x1080&index=random"
         },
         {
           "quality": "4k",
           "resolution": "3840x2160",
           "width": 3840,
           "height": 2160,
-          "url": "https://bingw.jasonzeng.dev/?index=random"
+          "url": "https://bingw.jasonzeng.dev/?resolution=UHD&index=random"
         }
       ]
     },
