@@ -53,6 +53,33 @@
           "url": "https://bingw.jasonzeng.dev/?index=random"
         }
       ]
-    }
+    },
+        {
+      "source_id": 3,
+      "source_name": "bing.biturl.top",
+      "streams": [
+        {
+          "quality": "hd",
+          "resolution": "1280x720",
+          "width": 1280,
+          "height": 720,
+          "url": "https://bing.biturl.top/?format=image&index=random"
+        },
+        {
+          "quality": "fullhd",
+          "resolution": "1920x1080",
+          "width": 1920,
+          "height": 1080,
+          "url": "https://bing.biturl.top/?format=image&index=random"
+        },
+        {
+          "quality": "4k",
+          "resolution": "3840x2160",
+          "width": 3840,
+          "height": 2160,
+          "url": "https://bing.biturl.top/?format=image&index=random"
+        }
+      ]
+    },
   ]
 }
